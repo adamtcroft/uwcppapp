@@ -8,17 +8,17 @@ allocated string.  Be sure to clean up prior to exiting main()
 */
 
 #include "stdafx.h"
-#include <string>
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-	string myName = "Adam T. Croft";
-	string* p_myName = new string[256];
-	p_myName = &myName;
-	cout << *p_myName << endl;
+	char *p_myName = new char[256];
+
+	strcpy(p_myName, "Adam T. Croft");
+
+	cout << p_myName << endl;
 
 	delete p_myName;
 
